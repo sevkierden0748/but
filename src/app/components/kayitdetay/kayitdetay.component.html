@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+
+            <button class="btn btn-outline-primary" [routerLink]="['/']">Anketlere Geri Dön</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h4>{{secKayit.baslik}}</h4>
+                </div>
+                <div class="card-body">
+                    <div [innerHTML]="secKayit.icerik"></div>
+                    <hr>
+                    <h5><b>Okunma Durumu</b></h5>
+
+                    <hr>
+                    <div class="form-group">
+                        <label>Cevap Seçiniz</label>
+                      
+
+                         
+                               
+                                <select name="kategori" class="form-control" [(ngModel)]="secKayit.iletildi">
+                                  <option *ngFor="let i of iletildi" [value]="i"> {{i}} </option>
+                                
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" (click)="Okundu()">Kaydet</button>
+                    <button class="btn btn-outline-warning btn-sm ml-3" *ngIf="secKayit.uid == uid" [routerLink]="['/kayitduzenle',secKayit.key]">Düzenle</button>
+                    <button class="btn btn-outline-danger btn-sm ml-3" *ngIf="secKayit.uid == uid" [routerLink]="['/kayitsil',secKayit.key]">Sil</button>
+                </div>
+                <div class="card-footer">
+
+                    <b>Eklenme Tarihi :</b>{{secKayit.kayTarih | date:'dd.MM.yyyy HH:mm:ss'}} <br>
+                    <b>Düzenlenme Tarihi :</b>{{secKayit.duzTarih | date:'dd.MM.yyyy HH:mm:ss'}} <br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

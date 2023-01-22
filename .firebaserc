@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "deneme-b5f7f": {
+      "hosting": {
+        "uyg01": [
+          "deneme-b5f7f"
+        ]
+      }
+    }
+  }
+}
