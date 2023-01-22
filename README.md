@@ -1,2 +1,2 @@
-# but
+# bütünleme projem
 npm i gerekli
