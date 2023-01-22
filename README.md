@@ -1,0 +1,2 @@
+# but
+npm i gerekli
